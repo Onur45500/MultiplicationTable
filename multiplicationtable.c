@@ -2,6 +2,7 @@
 /* multiplicationtable.c */
 
 #include <stdio.h>
+#include <assert.h>
 
 #define F fflush(stdout) 
 
@@ -25,6 +26,8 @@ int main()
 	int i = 0;
 	printf("Write a multiplication table (that will multiply it to 13)\n"); F;
 	scanf("%d", &table);
+	
+	assert((table > 0) && (table < 13));	
 
 	for(i ; i < 13; i++)
 		multiplicate(table, i);
